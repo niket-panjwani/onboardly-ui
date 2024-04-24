@@ -1,0 +1,9 @@
+export { HomeIcon } from './HomeIcon';
+export { UserPlusIcon } from './UserPlusIcon';
+export { UsersIcon } from './UsersIcon';
+export { FolderIcon } from './FolderIcon';
+export { SettingsIcon } from './SettingsIcon';
+export { TerminalIcon } from './TerminalIcon';
+export { BellIcon } from './BellIcon';
+export { GroupIcon } from './GroupIcon';
+export { SearchIcon } from './SearchIcon';
