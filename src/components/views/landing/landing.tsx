@@ -2,40 +2,18 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+import { CheckIcon } from "@/components/icons"
+import Header from "./header"
+import Footer from "./footer"
 
 export function Landing() {
   return (
-    <div key="1" className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center justify-between">
-        <Link className="flex items-center gap-2" href="#">
-          <TerminalIcon className="h-6 w-6" />
-          <span className="text-xl font-bold">Onboardly</span>
-        </Link>
-        <nav className="hidden md:flex gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Features
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Pricing
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Testimonials
-          </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Contact
-          </Link>
-        </nav>
-        <div className="flex gap-4 md:hidden">
-          <Button size="icon" variant="outline">
-            <MenuIcon className="h-6 w-6" />
-            <span className="sr-only">Toggle menu</span>
-          </Button>
-        </div>
-      </header>
+    <div key="1" className="flex flex-col justify-center min-h-[100vh] w-full">
+      <Header/>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+          <div className="px-4 md:px-6 w-full">
+            <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px] w-full">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
@@ -72,7 +50,7 @@ export function Landing() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100" id="features">
-          <div className="container px-4 md:px-6">
+          <div className="px-4 md:px-6 w-full">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm">Features</div>
@@ -123,7 +101,7 @@ export function Landing() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32" id="pricing">
-          <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+          <div className="grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10 w-full">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Pricing to Fit Your Needs</h2>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -191,7 +169,7 @@ export function Landing() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 border-t" id="testimonials">
-          <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+          <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">What Our Customers Say</h2>
               <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -199,8 +177,8 @@ export function Landing() {
               </p>
             </div>
             <div className="grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <Card>
-                <CardContent className="space-y-4">
+            <Card>
+                <CardContent className="flex flex-col items-center space-y-4 text-center">
                   <div className="flex items-center space-x-4">
                     <img
                       alt="Avatar"
@@ -215,17 +193,17 @@ export function Landing() {
                     />
                     <div>
                       <p className="text-sm font-medium">Jane Doe</p>
-                      <p className="text-sm text-gray-500">CTO, Acme Inc.</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">CTO, Acme Inc.</p>
                     </div>
                   </div>
-                  <p className="text-sm leading-relaxed text-gray-500">
-                    &quot;Onboardly has been a game-changer for our onboarding process. It&apos;s saved us so much time and effort,
-                    and our new hires are up and running in no time.&quot;
+                  <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                    "Automate has been a game-changer for our onboarding process. It's saved us so much time and effort,
+                    and our new hires are up and running in no time."
                   </p>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="space-y-4">
+                <CardContent className="flex flex-col items-center space-y-4 text-center">
                   <div className="flex items-center space-x-4">
                     <img
                       alt="Avatar"
@@ -240,17 +218,17 @@ export function Landing() {
                     />
                     <div>
                       <p className="text-sm font-medium">John Smith</p>
-                      <p className="text-sm text-gray-500">Engineering Manager, Acme Inc.</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Engineering Manager, Acme Inc.</p>
                     </div>
                   </div>
-                  <p className="text-sm leading-relaxed text-gray-500">
-                    &quot;I was skeptical at first, but Onboardly has completely transformed our onboarding process. It&apos;s made
-                    my job so much easier, and our new hires are more productive than ever.&quot;
+                  <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                    "I was skeptical at first, but Automate has completely transformed our onboarding process. It's made
+                    my job so much easier, and our new hires are more productive than ever."
                   </p>
                 </CardContent>
               </Card>
               <Card>
-                <CardContent className="space-y-4">
+                <CardContent className="flex flex-col items-center space-y-4 text-center">
                   <div className="flex items-center space-x-4">
                     <img
                       alt="Avatar"
@@ -265,12 +243,12 @@ export function Landing() {
                     />
                     <div>
                       <p className="text-sm font-medium">Sarah Johnson</p>
-                      <p className="text-sm text-gray-500">HR Manager, Acme Inc.</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">HR Manager, Acme Inc.</p>
                     </div>
                   </div>
-                  <p className="text-sm leading-relaxed text-gray-500">
-                  &quot;Onboardly has been a lifesaver for our HR team. It&apos;s streamlined our onboarding process and made it
-                    so much easier to get new hires up to speed.&quot;
+                  <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                    "Automate has been a lifesaver for our HR team. It's streamlined our onboarding process and made it
+                    so much easier to get new hires up to speed."
                   </p>
                 </CardContent>
               </Card>
@@ -278,7 +256,7 @@ export function Landing() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 border-t" id="contact">
-          <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+          <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Get in Touch</h2>
               <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -295,79 +273,8 @@ export function Landing() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500">© 2024 Onboardly. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
-          </Link>
-        </nav>
-      </footer>
+      <Footer/>
     </div>
   )
 }
 
-function CheckIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="20 6 9 17 4 12" />
-    </svg>
-  )
-}
-
-
-function MenuIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="4" x2="20" y1="12" y2="12" />
-      <line x1="4" x2="20" y1="6" y2="6" />
-      <line x1="4" x2="20" y1="18" y2="18" />
-    </svg>
-  )
-}
-
-
-function TerminalIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="4 17 10 11 4 5" />
-      <line x1="12" x2="20" y1="19" y2="19" />
-    </svg>
-  )
-}

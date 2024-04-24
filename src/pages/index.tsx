@@ -1,5 +1,5 @@
 import React from 'react';
-import { Landing } from '@/components/views/landing';
+import { Landing } from '@/components/views/landing/landing';
 
 export default function LandingPage() {
   return (

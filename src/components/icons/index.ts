@@ -7,3 +7,5 @@ export { TerminalIcon } from './TerminalIcon';
 export { BellIcon } from './BellIcon';
 export { GroupIcon } from './GroupIcon';
 export { SearchIcon } from './SearchIcon';
+export { MenuIcon } from './MenuIcon';
+export { CheckIcon } from './CheckIcon';
